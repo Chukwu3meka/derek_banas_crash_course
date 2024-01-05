@@ -8,20 +8,29 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 
 fn main() {
-    let age2: i32 = 8;
+    let arr_1: [i32; 4] = [1, 2, 3, 4];
 
-    match age2 {
-        1..=18 => println!("Important Birthday"),
-        21 | 50 => println!("Important Birthday"),
-        65..=i32::MAX => println!("Important Birthday"),
-        _ => println!("Not an Important Birthday"),
+    println!("1st: {}", arr_1[0]);
+    println!("Length: {}", arr_1.len());
+
+    let arr_2: [i32; 9] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let mut loop_idx: usize = 0;
+
+    loop {
+        if arr_2[loop_idx] % 2 == 0 {
+            loop_idx += 1;
+            continue;
+        }
+
+        if arr_2[loop_idx] == 9 {
+            break;
+        }
+
+        println!("Val: {}", arr_2[loop_idx]);
+        loop_idx += 1;
     }
 
-    let my_age = 18;
-    let voting_age = 18;
-    match my_age.cmp(&voting_age) {
-        Ordering::Less => println!("Can't vote"),
-        Ordering::Greater => println!("Can vote"),
-        Ordering::Equal => println!("You gained the right to vote"),
-    }
+    println!("1st: {}", arr_1[0]);
+    println!("1st: {}", arr_1[0]);
+    println!("1st: {}", arr_1[0]);
 }
