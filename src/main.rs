@@ -8,29 +8,16 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 
 fn main() {
-    let arr_1: [i32; 4] = [1, 2, 3, 4];
+    let vec1: Vec<i32> = Vec::new();
 
-    println!("1st: {}", arr_1[0]);
-    println!("Length: {}", arr_1.len());
+    let mut vec2 = vec![1, 2, 3, 4];
 
-    let arr_2: [i32; 9] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let mut loop_idx: usize = 0;
+    vec2.push(5);
+    println!("1st: {}", vec2[0]);
 
-    loop {
-        if arr_2[loop_idx] % 2 == 0 {
-            loop_idx += 1;
-            continue;
-        }
+    let second: &i32 = &vec2[1];
 
-        if arr_2[loop_idx] == 9 {
-            break;
-        }
+    // match vec2.get
 
-        println!("Val: {}", arr_2[loop_idx]);
-        loop_idx += 1;
-    }
-
-    println!("1st: {}", arr_1[0]);
-    println!("1st: {}", arr_1[0]);
-    println!("1st: {}", arr_1[0]);
+    // println!(": {}",);
 }

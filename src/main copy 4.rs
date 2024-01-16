@@ -8,5 +8,5 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 
 fn main() {
-    println!("Hello World!");
+    println!(": {}",);
 }
